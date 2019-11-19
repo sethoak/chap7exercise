@@ -9,4 +9,3 @@ public class Exercise
     public string _name { get; }
     public string _language { get; }
 }
-}

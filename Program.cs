@@ -18,11 +18,22 @@ namespace Csharp_CohortExercise
             Student SethOakley = new Student("Seth", "Oakley", "seth-oakley");
             Student DavidCornish = new Student("David", "Cornish", "david-cornish");
             Student HeidiSmith = new Student("Heidi", "Smith", "heidi-smith");
-            Student JamesMcClarty = new Student("James", "McClarty", "james-mcclarty");
 
-            Instructor AdamSheaffer = new Teacher("Adam", "Sheaffer", "adam-sheaffer", "back-end");
-            Instructor BrendaLong = new Teacher("Brenda", "Long", "brenda-long", "front-end");
-            Instructor MoSilvera = new Teacher("Mo", "Silvera", "mo-silvera", "front-end");
+            Instructor AdamSheaffer = new Instructor("Adam", "Sheaffer", "adam-sheaffer", "back-end");
+            Instructor BrendaLong = new Instructor("Brenda", "Long", "brenda-long", "front-end");
+            Instructor MoSilvera = new Instructor("Mo", "Silvera", "mo-silvera", "front-end");
+
+            cohort1.StudentList.Add(SethOakley);
+            cohort2.StudentList.Add(DavidCornish);
+            cohort3.StudentList.Add(HeidiSmith);
+
+            cohort1.InstructorList.Add(AdamSheaffer);
+            cohort2.InstructorList.Add(BrendaLong);
+            cohort3.InstructorList.Add(MoSilvera);
+
+            AdamSheaffer.AssignExercise(SethOakley, exercise1);
+            BrendaLong.AssignExercise(DavidCornish, exercise2);
+            MoSilvera.AssignExercise(SethOakley, exercise3);
         }
     }
 }

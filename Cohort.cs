@@ -14,6 +14,6 @@ namespace Csharp_CohortExercise
         private string _name;
 
         public List<Student> StudentList = new List<Student>();
-        public List<Instructor> StudentList = new List<Instructor>();
+        public List<Instructor> InstructorList = new List<Instructor>();
     }
 }

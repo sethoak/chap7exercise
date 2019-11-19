@@ -1,0 +1,11 @@
+C:\Users\Oakley\desktop\workspace\Csharp-CohortExercise\obj\Debug\netcoreapp3.0\Csharp-CohortExercise.csprojAssemblyReference.cache
+C:\Users\Oakley\desktop\workspace\Csharp-CohortExercise\obj\Debug\netcoreapp3.0\Csharp-CohortExercise.AssemblyInfoInputs.cache
+C:\Users\Oakley\desktop\workspace\Csharp-CohortExercise\obj\Debug\netcoreapp3.0\Csharp-CohortExercise.AssemblyInfo.cs
+C:\Users\Oakley\desktop\workspace\Csharp-CohortExercise\bin\Debug\netcoreapp3.0\Csharp-CohortExercise.exe
+C:\Users\Oakley\desktop\workspace\Csharp-CohortExercise\bin\Debug\netcoreapp3.0\Csharp-CohortExercise.deps.json
+C:\Users\Oakley\desktop\workspace\Csharp-CohortExercise\bin\Debug\netcoreapp3.0\Csharp-CohortExercise.runtimeconfig.json
+C:\Users\Oakley\desktop\workspace\Csharp-CohortExercise\bin\Debug\netcoreapp3.0\Csharp-CohortExercise.runtimeconfig.dev.json
+C:\Users\Oakley\desktop\workspace\Csharp-CohortExercise\bin\Debug\netcoreapp3.0\Csharp-CohortExercise.dll
+C:\Users\Oakley\desktop\workspace\Csharp-CohortExercise\bin\Debug\netcoreapp3.0\Csharp-CohortExercise.pdb
+C:\Users\Oakley\desktop\workspace\Csharp-CohortExercise\obj\Debug\netcoreapp3.0\Csharp-CohortExercise.dll
+C:\Users\Oakley\desktop\workspace\Csharp-CohortExercise\obj\Debug\netcoreapp3.0\Csharp-CohortExercise.pdb

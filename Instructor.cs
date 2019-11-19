@@ -11,7 +11,7 @@ namespace Csharp_CohortExercise
             _firstName = first;
             _lastName = last;
             _slack = slack;
-            _speciality = speciality;
+            _speciality = specialty;
         }
 
         string _firstName { get; }
