@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Csharp_CohortExercise
 {
@@ -34,6 +35,26 @@ namespace Csharp_CohortExercise
             AdamSheaffer.AssignExercise(SethOakley, exercise1);
             BrendaLong.AssignExercise(DavidCornish, exercise2);
             MoSilvera.AssignExercise(SethOakley, exercise3);
+
+            List<Student> students = new List<Student>();
+            students.Add(SethOakley);
+            students.Add(DavidCornish);
+            students.Add(HeidiSmith);
+
+            List<Exercise> exercises = new List<Exercise>();
+            exercises.Add(exercise1);
+            exercises.Add(exercise2);
+            exercises.Add(exercise3);
+
+            foreach (Student student in students)
+            {
+                Console.WriteLine($"Student: {student._firstName} {student._lastName}");
+                Console.WriteLine("Exercises:");
+                foreach (Exercise exercise in student.Exercises)
+                {
+                    Console.WriteLine($"Program: {exercise._name} Language: {exercise._language}");
+                }
+            }
         }
     }
 }
