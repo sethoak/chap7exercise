@@ -120,6 +120,14 @@ namespace Csharp_CohortExercise
                 Console.WriteLine($"{instructor._cohort}");
             });
 
+            // Sort the students by their last name.
+            List<Student> orderedLastNameStudents = students.OrderBy(student => student._lastName).ToList();
+
+            Console.WriteLine("");
+            Console.WriteLine("Students by last name:");
+            Console.WriteLine("-------");
+            orderedLastNameStudents.ForEach(student => Console.WriteLine($"{student._firstName} {student._lastName}"));
+
         }
     }
 }
