@@ -128,6 +128,9 @@ namespace Csharp_CohortExercise
             Console.WriteLine("-------");
             orderedLastNameStudents.ForEach(student => Console.WriteLine($"{student._firstName} {student._lastName}"));
 
+            //Display any students that aren't working on any exercises.
+
+
         }
     }
 }
