@@ -14,7 +14,6 @@ namespace Csharp_CohortExercise
         }
 
         public string _firstName { get; }
-        public string cohortList { get; set; }
         public string _lastName { get; }
         public string _slack { get; }
         public int _cohort { get; set; }

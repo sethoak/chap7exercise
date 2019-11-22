@@ -97,7 +97,7 @@ namespace Csharp_CohortExercise
 
             //List students in a particular cohort by using the Where() LINQ method.
             var cohort35 = (from student in students
-                            where student.cohortList == "35"
+                            where student._cohort == 35
                             select student).ToList();
 
             cohort35.ForEach(student =>
