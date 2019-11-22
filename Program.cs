@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Csharp_CohortExercise
 {
@@ -83,6 +84,16 @@ namespace Csharp_CohortExercise
                     Console.WriteLine($"Program: {exercise._name} Language: {exercise._language}");
                 }
             }
+
+            // List exercises for the JavaScript language by using the Where() LINQ method.
+            var jsExercises = (from exercise in exercises
+                               where exercise._language == "JS"
+                               select exercise).ToList();
+
+            jsExercises.ForEach(exercise =>
+            {
+                Console.WriteLine(exercise._name);
+            });
         }
     }
 }
