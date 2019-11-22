@@ -21,13 +21,13 @@ namespace Csharp_CohortExercise
             Cohort cohort2 = new Cohort("Cohort 34");
             Cohort cohort3 = new Cohort("Cohort 35");
 
-            Student SethOakley = new Student("Seth", "Oakley", "seth-oakley");
-            Student DavidCornish = new Student("David", "Cornish", "david-cornish");
-            Student HeidiSmith = new Student("Heidi", "Smith", "heidi-smith");
-            Student LarryBird = new Student("Larry", "Bird", "larry-bird");
-            Student KristinDavis = new Student("Kristin", "Davis", "kristin-davis");
-            Student LoshannaD = new Student("Loshanna", "D", "loshanna-d");
-            Student TreGupton = new Student("Tre", "Gupton", "tre-gupton");
+            Student SethOakley = new Student("Seth", "Oakley", "seth-oakley", 35);
+            Student DavidCornish = new Student("David", "Cornish", "david-cornish", 35);
+            Student HeidiSmith = new Student("Heidi", "Smith", "heidi-smith", 34);
+            Student LarryBird = new Student("Larry", "Bird", "larry-bird", 33);
+            Student KristinDavis = new Student("Kristin", "Davis", "kristin-davis", 35);
+            Student LoshannaD = new Student("Loshanna", "D", "loshanna-d", 34);
+            Student TreGupton = new Student("Tre", "Gupton", "tre-gupton", 35);
 
             Instructor AdamSheaffer = new Instructor("Adam", "Sheaffer", "adam-sheaffer", "back-end");
             Instructor BrendaLong = new Instructor("Brenda", "Long", "brenda-long", "front-end");
@@ -94,6 +94,19 @@ namespace Csharp_CohortExercise
             {
                 Console.WriteLine(exercise._name);
             });
+
+            //List students in a particular cohort by using the Where() LINQ method.
+            var cohort35 = (from student in students
+                            where student.cohortList == "35"
+                            select student).ToList();
+
+            cohort35.ForEach(student =>
+            {
+                Console.WriteLine($"{student._cohort}");
+            });
+
+            //List instructors in a particular cohort by using the Where() LINQ method.
+
         }
     }
 }
