@@ -29,9 +29,9 @@ namespace Csharp_CohortExercise
             Student LoshannaD = new Student("Loshanna", "D", "loshanna-d", 34);
             Student TreGupton = new Student("Tre", "Gupton", "tre-gupton", 35);
 
-            Instructor AdamSheaffer = new Instructor("Adam", "Sheaffer", "adam-sheaffer", "back-end");
-            Instructor BrendaLong = new Instructor("Brenda", "Long", "brenda-long", "front-end");
-            Instructor MoSilvera = new Instructor("Mo", "Silvera", "mo-silvera", "front-end");
+            Instructor AdamSheaffer = new Instructor("Adam", "Sheaffer", "adam-sheaffer", "back-end", 34);
+            Instructor BrendaLong = new Instructor("Brenda", "Long", "brenda-long", "front-end", 35);
+            Instructor MoSilvera = new Instructor("Mo", "Silvera", "mo-silvera", "front-end", 35);
 
             cohort1.StudentList.Add(SethOakley);
             cohort2.StudentList.Add(DavidCornish);
@@ -75,6 +75,11 @@ namespace Csharp_CohortExercise
             exercises.Add(exercise7);
             exercises.Add(exercise8);
 
+            List<Instructor> instructors = new List<Instructor>();
+            instructors.Add(AdamSheaffer);
+            instructors.Add(BrendaLong);
+            instructors.Add(MoSilvera);
+
             foreach (Student student in students)
             {
                 Console.WriteLine($"Student: {student._firstName} {student._lastName}");
@@ -106,6 +111,14 @@ namespace Csharp_CohortExercise
             });
 
             //List instructors in a particular cohort by using the Where() LINQ method.
+            var teacher35 = (from instructor in instructors
+                             where instructor._cohort == 35
+                             select instructor).ToList();
+
+            teacher35.ForEach(instructor =>
+            {
+                Console.WriteLine($"{instructor._cohort}");
+            });
 
         }
     }
