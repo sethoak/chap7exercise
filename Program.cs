@@ -21,13 +21,13 @@ namespace Csharp_CohortExercise
             Cohort cohort2 = new Cohort("Cohort 34");
             Cohort cohort3 = new Cohort("Cohort 35");
 
-            Student SethOakley = new Student("Seth", "Oakley", "seth-oakley", 35);
-            Student DavidCornish = new Student("David", "Cornish", "david-cornish", 35);
-            Student HeidiSmith = new Student("Heidi", "Smith", "heidi-smith", 34);
-            Student LarryBird = new Student("Larry", "Bird", "larry-bird", 33);
-            Student KristinDavis = new Student("Kristin", "Davis", "kristin-davis", 35);
-            Student LoshannaD = new Student("Loshanna", "D", "loshanna-d", 34);
-            Student TreGupton = new Student("Tre", "Gupton", "tre-gupton", 35);
+            Student SethOakley = new Student("Seth", "Oakley", "seth-oakley", 35, 3, true);
+            Student DavidCornish = new Student("David", "Cornish", "david-cornish", 35, 2, true);
+            Student HeidiSmith = new Student("Heidi", "Smith", "heidi-smith", 34, 2, true);
+            Student LarryBird = new Student("Larry", "Bird", "larry-bird", 33, 17, false);
+            Student KristinDavis = new Student("Kristin", "Davis", "kristin-davis", 35, 0, false);
+            Student LoshannaD = new Student("Loshanna", "D", "loshanna-d", 34, 0, false);
+            Student TreGupton = new Student("Tre", "Gupton", "tre-gupton", 35, 1, true);
 
             Instructor AdamSheaffer = new Instructor("Adam", "Sheaffer", "adam-sheaffer", "back-end", 34);
             Instructor BrendaLong = new Instructor("Brenda", "Long", "brenda-long", "front-end", 35);
@@ -129,7 +129,12 @@ namespace Csharp_CohortExercise
             orderedLastNameStudents.ForEach(student => Console.WriteLine($"{student._firstName} {student._lastName}"));
 
             //Display any students that aren't working on any exercises.
-
+            var notWorking = (from student in students
+                              where student._exercise == 0
+                              select student).ToList();
+            {
+                // Console.WriteLine($"{student._exercise}");
+            }
 
         }
     }
