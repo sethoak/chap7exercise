@@ -80,6 +80,13 @@ namespace Csharp_CohortExercise
             instructors.Add(BrendaLong);
             instructors.Add(MoSilvera);
 
+            List<Cohort> cohorts = new List<Cohort>()
+            {
+                cohort1,
+                cohort2,
+                cohort3
+            };
+
             foreach (Student student in students)
             {
                 Console.WriteLine($"Student: {student._firstName} {student._lastName}");
@@ -137,13 +144,16 @@ namespace Csharp_CohortExercise
             }
 
             //Which student is working on the most exercises? Make sure one of your students has more exercises than the others.
-            var mostWorking = (from student in students
-                               orderby student.Exercises.Count descending
-                               select student).ToList();
+            List<Student> mostWorking = (from student in students
+                                         orderby student.Exercises.Count descending
+                                         select student).ToList();
 
             {
-                // Console.WriteLine($"Most Assignment List: {mostWorking._firstName}")
+                // Console.WriteLine($"Most Assignment List: {student._firstName}")
             }
+
+            //How many students in each cohort?
+            cohorts.ForEach(cohort => Console.WriteLine($"{cohort._name} - {cohort.Students.Count}"));
         }
     }
 }
