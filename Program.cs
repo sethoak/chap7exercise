@@ -136,6 +136,14 @@ namespace Csharp_CohortExercise
                 // Console.WriteLine($"{student._exercise}");
             }
 
+            //Which student is working on the most exercises? Make sure one of your students has more exercises than the others.
+            var mostWorking = (from student in students
+                               orderby student.Exercises.Count descending
+                               select student).ToList();
+
+            {
+                // Console.WriteLine($"Most Assignment List: {mostWorking._firstName}")
+            }
         }
     }
 }
